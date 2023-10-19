@@ -3,6 +3,23 @@ position-y to fix the image at a different location of the large image. */
 body {
     background-image: url("/images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
     background-position-y: 22%;
+    background-size: 120%;
     margin: 0;
     padding: 0;
-};
+}
+
+/* 
+Photo by <a href="https://unsplash.com/@itfeelslikefilm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">🇸🇮 Janko Ferlič</a> on <a href="https://unsplash.com/photos/sfL_QOnmy00?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+*/
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    box-shadow: 0px -25px 35px 20px #5d6684;
+    opacity: 90%;
+    height: 35px;
+    width: 100vw;
+    background-color: #5d6684;
+    font-size: 72px;
+}
