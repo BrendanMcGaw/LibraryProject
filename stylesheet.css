@@ -1,0 +1,8 @@
+/* Added  background image of library, warm and inviting, used 
+position-y to fix the image at a different location of the large image. */
+body {
+    background-image: url("/images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
+    background-position-y: 22%;
+    margin: 0;
+    padding: 0;
+};
