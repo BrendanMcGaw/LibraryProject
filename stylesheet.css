@@ -8,14 +8,21 @@ body {
     padding: 0;
 }
 
-/* 
-Photo by <a href="https://unsplash.com/@itfeelslikefilm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">🇸🇮 Janko Ferlič</a> on <a href="https://unsplash.com/photos/sfL_QOnmy00?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-*/
+.imageCredit {
+    grid-column: 4 / 5;
+    justify-self: end;
+    align-self: end;
+    margin-right: 15px;
+    font-size: 14px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 .footer {
     position: absolute;
     bottom: 0;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
     box-shadow: 0px -25px 35px 20px #5d6684;
     opacity: 90%;
     height: 35px;
@@ -23,3 +30,9 @@ Photo by <a href="https://unsplash.com/@itfeelslikefilm?utm_content=creditCopyTe
     background-color: #5d6684;
     font-size: 72px;
 }
+/* Animation ideas. 
+First: GITHUB Logo in my footer centered, with some type of animation of the cat, maybe spinning around, or winking?
+Second: Animated form that fades in (Looks like a book) when the form is filled and submitted, 
+the book will fold up and fly away onto an invisible shelf and then fade away, maybe have
+a link for the books that grows each time a book is submitted to it.
+Maybe even animate a page to fall out of the words when it reaches more then 5 books for every new one you put in? */
