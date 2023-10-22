@@ -1,6 +1,9 @@
 /* Added  background image of library, warm and inviting, used 
 position-y to fix the image at a different location of the large image. */
+/* body styles transition in over 5s, making the website look like we're looking through the library. */
 body {
+    transition-duration: 5s;
+    animation: background-fadeIn 2s;
     background-image: url("/images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
     background-position-y: 22%;
     background-repeat: no-repeat;
@@ -13,6 +16,15 @@ body {
     grid-template-rows: repeat(5, 15rem);
     margin: 0;
     padding: 0;
+}
+
+@keyframes background-fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
 
 @font-face {
@@ -71,13 +83,13 @@ When button is pressed, perform transition to transform:scale(1) */
 
 /* Styling for book button, along with transition animation to hover off the button. */
 .addBookButton {
-    animation: loadIn 2s;
+    animation: loadIn 4.8s;
     text-align: center;
     text-justify: center;
     height: 75px;
     width: 300px;
     color: white;
-    background-color: rgb(48, 168, 216);
+    background-color: #9E6958;
     border-radius: 15px;
     border: 1px solid #EAB599;
     font-size: 30px;
@@ -91,7 +103,7 @@ When button is pressed, perform transition to transform:scale(1) */
     0% {
         transform:scale(0);
     }
-    25% {
+    35% {
         transform:scale(0);
     }
     100% {
@@ -106,7 +118,7 @@ When button is pressed, perform transition to transform:scale(1) */
     width: 340px;
     height: 85px;
     text-shadow:2px 2px #5d6684;
-    box-shadow: 0px 5px 5px 5px #5d6684;
+    box-shadow: 0px 5px 5px 2px #5d6684;
 }
 
 /* button clickdown transformation. */
