@@ -2,8 +2,8 @@
 position-y to fix the image at a different location of the large image. */
 /* animation fadeIn looks through library */
 body {
-    animation: fadeIn 5s;
-    background-image: url("../images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
+    animation: searchLibrary 5s;
+    background-image: url("./images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
     background-position-y: 22%;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -18,7 +18,7 @@ body {
 }
 
 /* animation fadeIn looks through library */
-@keyframes fadeIn {
+@keyframes searchLibrary {
     0%  {
         background-position-y: 0%;
     }
