@@ -84,6 +84,10 @@ When button is pressed, perform transition to transform:scale(1) */
     align-self: end;
 }
 
+.myClass {
+    background-color: black;
+}
+
 /* Styling for book button, along with transition animation to hover off the button. */
 .addBookButton {
     animation: loadIn 4.6s;
@@ -104,13 +108,13 @@ When button is pressed, perform transition to transform:scale(1) */
 /* keyframe to scale up book button add after page load. Scattered times to bring it in as the image is scrolling. */
 @keyframes loadIn {
     0% {
-        transform:scale(0);
+        opacity: 0;
     }
     35% {
-        transform:scale(0);
+        opacity: 0;
     }
     100% {
-        transform:scale(1);
+        opacity: 1;
     }
 }
 
@@ -142,12 +146,10 @@ When button is pressed, perform transition to transform:scale(1) */
     transform:scale(0);
 }
 
-
-
-/* .bookContainerSize:hover {
+.bookContainerSize:hover {
     transform:scale(0);
     transition-duration: 3s;
-} */
+}
 
 .imageCredit {
     grid-column: 4 / 5;
