@@ -4,7 +4,7 @@ position-y to fix the image at a different location of the large image. */
 body {
     transition-duration: 5s;
     animation: background-fadeIn 2s;
-    background-image: url("./images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
+    background-image: url("images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
     background-position-y: 22%;
     background-repeat: no-repeat;
     background-attachment: scroll;
