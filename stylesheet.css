@@ -15,15 +15,18 @@ body {
     grid-template-rows: repeat(5, 15rem);
     margin: 0;
     padding: 0;
+    opacity: 1;
 }
 
 /* animation fadeIn looks through library */
 @keyframes searchLibrary {
     0%  {
+        opacity: 0;
         background-position-y: 0%;
     }
     100% {
         background-position-y: 22%;
+        opacity: 1;
     } 
 }
 
