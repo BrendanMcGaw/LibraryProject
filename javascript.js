@@ -1,7 +1,9 @@
 const myBooks = [];
 const buttonClick = document.getElementsByClassName("addBookButton");
 const buttonId = document.getElementById("addBookButton");
-const button = document.querySelector(button);
+const bookContainerSize = document.getElementById("bookContainerSize");
+const bookImage = document.getElementById("bookImage");
+const tableForm = document.getElementById("tableForm");
 
 function Book(title, author, pages, read) {
     this.title = title;
@@ -14,9 +16,10 @@ function addBookToLibrary() {
 
 }
 
-buttonClick[1].addEventListener(onclick, alertMe());
-
-function alertMe() {
-    alert("Hello World!");
+function hideSubmitButton() {
+    bookContainerSize.classList.remove("hide-item");
+    bookImage.classList.remove("hide-item");
+    tableForm.classList.remove("hide-item");
+    buttonId.classList.add("myClass");
 }
 

@@ -7,35 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="bookContainerSize hide-item">
-        <table class="hide-item">
-            <th>Enter Your Book Details</th>
-            <tr>
-                <td>
-                    <label for="title">Title:</label>
-                    <input type="text" name="title" id="title">
-                </td>
-                <td>
-                    <label for="author">Author:</label>
-                    <input type="text" name="author" id="author">
-                   </td>
-                <td>
-                    <label for="pages">Pages:</label>
-                    <input type="text" name="pages" id="pages">
-                </td>
-                <td>
-                    <label for="read">Read:</label>
-                    <input type="text" name="read" id="read">
-                </td>
-            </tr>
+    <div id="bookContainerSize" class="hide-item">
+        <table id="tableForm" class="hide-item">
+            <form action="">
+                <th>Enter Your Book Details</th>
+                <tr>
+                    <td>
+                        <label for="title">Title:</label>
+                        <input type="text" name="title" id="title">
+                    </td>
+                    <td>
+                        <label for="author">Author:</label>
+                        <input type="text" name="author" id="author">
+                    </td>
+                    <td>
+                        <label for="pages">Pages:</label>
+                        <input type="text" name="pages" id="pages">
+                    </td>
+                    <td>
+                        <label for="read">Read:</label>
+                        <input type="text" name="read" id="read">
+                    </td>
+                </tr>
+            </form>
         </table>
     </div>
-    <div class="bookImage hide-item">
-        <img class="bookImage" src="images/open book image.png" alt="" srcset="">
+    <div id="bookImage" class="hide-item">
+        <img class="id" src="images/open book image.png" alt="" srcset="">
     </div>
-    <div class="bookButtonContainer">
-        <button class="addBookButton" id="addBookButton" type="button">Add a book</button>
-    </div>
+    <span class="bookButtonContainer">
+        <button class="addBookButton" id="addBookButton" type="button" onclick="hideSubmitButton()">Add a book</button>
+    </span>
     <div class="footer">
         <span class="imageCredit">
             Photo by <a href="https://unsplash.com/@itfeelslikefilm?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">🇸🇮 Janko Ferlič</a> on <a href="https://unsplash.com/photos/sfL_QOnmy00?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>

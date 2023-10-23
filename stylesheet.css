@@ -6,9 +6,9 @@ body {
     background-image: url("./images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
     background-position-y: 22%;
     background-repeat: no-repeat;
-    background-attachment: scroll;
     height: 100%;
     overflow: hidden;
+    overflow-anchor: none; /* Stops the grid from shifting upwards. */
     background-size: 120%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -17,6 +17,12 @@ body {
     padding: 0;
     opacity: 1;
 }
+
+/* TODO:::
+Divs sitting ontop of each other are getting fucked up when I transition the button out for the form.
+figure it out nerd. */
+
+/* MAKE ANOTHER BRANCH BEFORE DOING ANY MORE WORK TODAY.... */
 
 /* animation looks through library and fades in background items. */
 @keyframes searchLibrary {
@@ -39,7 +45,7 @@ body {
 input {
     font-size: 30px;
     font-family: writtenText;
-    width: 450px;
+    width: 400px;
     height: minMax(40px, 80px);
     flex-wrap: wrap;
     border: none;
@@ -78,6 +84,7 @@ When button is pressed, perform transition to transform:scale(1) */
 
 /* Positining for the add a book button. */
 .bookButtonContainer {
+    z-index: 2;
     grid-column: 3/4;
     grid-row: 2/3;
     justify-self: center;
@@ -85,7 +92,20 @@ When button is pressed, perform transition to transform:scale(1) */
 }
 
 .myClass {
-    background-color: black;
+    transition-duration: 3s;
+    opacity: 0;
+}
+
+/* Fades out the button after clicking it (Doesn't work well yet TODO::) */
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+    
 }
 
 /* Styling for book button, along with transition animation to hover off the button. */
@@ -102,7 +122,7 @@ When button is pressed, perform transition to transform:scale(1) */
     font-size: 30px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bolder;
-    transition-duration:.3s;
+    transition-duration:0.3s;
 }
 
 /* keyframe to scale up book button add after page load. Scattered times to bring it in as the image is scrolling. */
@@ -135,20 +155,18 @@ When button is pressed, perform transition to transform:scale(1) */
     box-shadow: 2px 2px 2px 2px #5d6684;
 }
 
-.bookContainerSize {
+#bookContainerSize {
     grid-column: 2 / 5;
     grid-row: 1/4;
+    margin-left: 125px;
+    margin-top: 50px;
     z-index: 1;
+    transition-delay: 2s;
+    transition: 2s ease;
 }
-
 
 .hide-item {
     transform:scale(0);
-}
-
-.bookContainerSize:hover {
-    transform:scale(0);
-    transition-duration: 3s;
 }
 
 .imageCredit {
@@ -160,13 +178,16 @@ When button is pressed, perform transition to transform:scale(1) */
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.bookImage {
-    position: absolute;
-    right: 185px;
-    grid-column: 2;
+#bookImage {
+    position: relative;
+    top: 50px;
+    left: 75px;
+    grid-column: 2 / 5;
     grid-row: 1/4;
     width: 1200px;
     filter: drop-shadow(0 0 15px black);
+    transition-delay: 2s;
+    transition: 2s ease;
 }
 
 .footer {
