@@ -1,10 +1,15 @@
 /* Added  background image of library, warm and inviting, used 
 position-y to fix the image at a different location of the large image. */
 /* animation fadeIn looks through library */
+@font-face {
+    font-family: writtenText;
+    src: url(CAVOLINI.TTF);
+}
+
 body {
     animation: searchLibrary 5s;
     background-image: url("./images/janko-ferlic-sfL_QOnmy00-unsplash.jpg");
-    background-position-y: 22%;
+    background-position-y: 42%;
     background-repeat: no-repeat;
     height: 100%;
     overflow: hidden;
@@ -18,12 +23,6 @@ body {
     opacity: 1;
 }
 
-/* TODO:::
-Divs sitting ontop of each other are getting fucked up when I transition the button out for the form.
-figure it out nerd. */
-
-/* MAKE ANOTHER BRANCH BEFORE DOING ANY MORE WORK TODAY.... */
-
 /* animation looks through library and fades in background items. */
 @keyframes searchLibrary {
     0%  {
@@ -31,15 +30,12 @@ figure it out nerd. */
         background-position-y: 0%;
     }
     100% {
-        background-position-y: 22%;
+        background-position-y: 42%;
         opacity: 1;
     } 
 }
 
-@font-face {
-    font-family: writtenText;
-    src: url(CAVOLINI.TTF);
-}
+/* MAKE ANOTHER BRANCH BEFORE DOING ANY MORE WORK TODAY.... */
 
 /* input styling to allow the text to look  like it was being wrritten into the book. */
 input {
@@ -161,7 +157,6 @@ When button is pressed, perform transition to transform:scale(1) */
     margin-left: 125px;
     margin-top: 50px;
     z-index: 1;
-    transition-delay: 2s;
     transition: 2s ease;
 }
 
@@ -186,10 +181,10 @@ When button is pressed, perform transition to transform:scale(1) */
     grid-row: 1/4;
     width: 1200px;
     filter: drop-shadow(0 0 15px black);
-    transition-delay: 2s;
     transition: 2s ease;
 }
 
+/* Gray footer on  the page. */
 .footer {
     position: absolute;
     bottom: 0;
